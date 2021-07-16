@@ -1,66 +1,157 @@
 
-
+// @import "bootstrap/dist/css/bootstrap";
 html,
 body {
-  height: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-image: image_url(AdobeStock_321197331);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    
 }
 
-#page-content {
-  flex: 1 0 auto;
-  background-color: rgb(239, 255, 254);
+.no-margins {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
 }
 
-#sticky-footer {
-  flex-shrink: none;
+// Navigation Bar
+.nav-link {
+    color: white !important;
 }
 
+.no-bull {
+    list-style-type: none !important;
+}
 .navbar {
-  background-color: rgb(195, 237, 248) !important;
+    background-color: rgba(27, 27, 27, 0.3) !important;
+    // color: antiquewhite !important;
+}
+
+.nav-item {
+    font-size: 20px!important;
 }
 
 .navbar-brand {
-    margin-top: 0.75em !important;
+    font-size: 25px !important;
+    padding-top: 20px;
 }
 
-.nav-link {
-  color: white !important;
+// Footer structure 
+#page-content {
+    flex: 1 0 auto !important;
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
 }
 
-#logo {
-  float: left;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  font-weight: bold;
+#links-footer {
+    text-align: right;
+    line-height: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+  
+#text-bottom {
+    position:relative;
+    bottom: 0 !important;
+    color:antiquewhite;
 }
 
-#home-container {
-  margin-top: 25px;
+#sticky-footer {
+    flex-shrink: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0!important;
 }
 
-.jumbotron {
-  background-image: asset-url('jumbo-copy.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
+
+// General Styling
+
+.ln-br {
+    overflow-wrap:normal;
+    inline-size: 100%;
 }
 
-.logout-button {
-  margin-top: 1em !important;
-  margin-bottom: 0.5em !important;
-  align-items: center !important;
-  padding-right: 0% !important;
-  padding-left: 0% !important;
+.wd-250 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 250px !important;
 }
 
-.user-name {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+.wd-75 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 75px !important;
 }
 
-.text-center {
-    text-align: center !important;
-    
+.wd-50p {
+    // margin-top: 10px;
+    // margin-bottom: 5px;
+    width: 49% !important;
+    padding: 0% !important;
+    margin: 0% !important;
+}
+
+
+.center {
+    // margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.vert-center {
+    margin: 0;
+    top: 50%;
+    // transform: translate(0, -50%);
+}
+
+.lm-50 {
+    margin-left: 50px;
+}
+
+
+
+
+// Buttons
+
+.btn-outline-danger {
+    border:2px solid #EEEEEE;
+    color:rgb(235, 201, 193);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.link-md {
+    font-size: 16px;
+}
+
+// devise sign-in
+
+.login-form-container {
+    width: 500px;
+    margin-top: 200px;
+}
+
+.label-tags {
+    font-size: 16px;
+    color: beige;
+    margin-top: 25px;
+}
+
+.shared-links-tags {
+    color:rgb(235, 201, 193) !important;
+    margin-top: 5px !important;
 }

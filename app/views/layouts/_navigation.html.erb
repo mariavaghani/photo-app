@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-default navbar-static-left">
+    <div class="container-flex">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <%= link_to ("<i class='fa fa-camera-retro'></i> PhotoApp").html_safe, root_path, class:'navbar-brand nav-link'%>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            
+            <ul class="navbar-nav nav-item no-bull">
+                <li><%= link_to "Link1", "/path1", class:'btn wd-75'  %></li>
+                <li><%= link_to "Link2", "/path2", class:'btn wd-75'  %></li>
+                <li><%= link_to "Link3", "/path3", class:'btn wd-75'  %></li>
+            </ul>
+
+            <ul class='navbar-nav pull-right no-bull'>
+                <% if current_user %>
+
+                    <li>
+                        <%= link_to ("<i class='fa fa-user'></i> " + truncate(current_user.email, length: 25)).html_safe,
+                                        edit_user_registration_path, class:'btn wd-250 nav-link link-md', title: 'Edit Profile' %>
+                    </li>
+                    <li>
+                        <%= link_to "Logout", destroy_user_session_path, class: "btn btn-sm btn-outline-danger wd-75 pull-right", method: :delete %>
+                    </li>
+
+                <% else %>
+                    <li class='right-link'>
+                        <%= link_to "Sign in", new_user_session_path, class:'btn btn-outline-danger sign-in-btn wd-250 pull-right' %>
+                    </li>
+                <% end %>
+            </ul>
+
+        </div>
+    </div>
+</nav>

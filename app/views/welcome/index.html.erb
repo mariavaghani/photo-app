@@ -1,2 +1,33 @@
-<h1>Welcome to Photo App</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="container-flex">
+    <div class="row">
+        <div class="col-xs-4 left-card pull-left">
+            <div class='container center ln-br'>
+                <div class='ln-br text-big ln-br'>Welcome to Photo App</div>
+                <p>Sign up to manage your photos with us!</p>
+            </div>
+        </div>
+        <div class="col-xs-5 pull-right right-card">
+            <div class="col-xs-6">
+                <h3><%= link_to "Premium Plan", "/path1", class: "plan-title" %></h3>
+                <div class='price-tag center-elements'>Price: $10</div>
+                <ul class='alg-r'>
+                    <li>Unlimited Image Uploads</li>
+                    <li>Responsive Design</li>
+                    <li>Access anywhere</li>
+                </ul>
+                <%= link_to "Sign up", '#', class: "btn btn-outline-primary-c wd-75 center-elements" %>
+            </div>
+            <div class="col-xs-6">
+                <h3><%= link_to "Amaze Plan", "/path1", class: 'plan-title'  %></h3>
+                <div class='price-tag center-elements'>Price: $20</div>
+                <ul class='alg-r'>
+                    <li>Unlimited Image Uploads</li>
+                    <li>Responsive Design</li>
+                    <li>Access anywhere</li>
+                    <li>Unlimited Projects</li>
+                </ul>
+                <%= link_to "Sign up", '#', class: "btn btn-outline-primary-c wd-75 center-elements" %>
+            </div>
+        </div>
+    </div>
+</div>
