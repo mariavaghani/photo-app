@@ -138,11 +138,52 @@ body {
     font-size: 16px;
 }
 
+.btn-outline-primary-c {
+    border:1px solid bisque;
+    padding: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px !important;
+    width: 50%;
+    color: bisque;
+}
+
+.sign-in-btn {
+    color:rgb(170, 203, 230) !important;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.sign-in-btn:hover {
+    font-weight: bold !important;
+    color: rgb(250, 251, 252) !important;
+    border:4px solid rgb(170, 218, 207);
+    padding-top: 13px !important;
+    padding-bottom: 13px;
+  }
+
+.sign-up-btn{
+    color:rgb(170, 203, 230) !important;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: 40%;
+    height: 60px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.274) !important;
+}
+
+.sign-up-btn:hover {
+    font-weight: bold !important;
+    color: rgb(250, 251, 252) !important;
+    border:4px solid rgb(170, 218, 207);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    
+  }
+
 // devise sign-in
 
 .login-form-container {
     width: 500px;
-    margin-top: 200px;
+    margin-top: 140px;
 }
 
 .label-tags {
