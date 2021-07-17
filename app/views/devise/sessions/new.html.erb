@@ -50,12 +50,29 @@
       </div>
     <% end %>
 
-
-    <div class="form-group center-elements">
-      <%= f.submit  t('.sign_in'), class: 'sign-up-btn center-elements' %>
+    <div class='container-flex'>
+      <div class="form-group container-flex wd-250 center-elements">
+        <%= f.submit  t('.sign_in'), class: 'sign-up-btn center-elements' %>
+      </div>
     </div>
   <% end %>
   <%= render 'devise/shared/links' %>
+
+  <form action="/charge" method="post" id="payment-form">
+    <div class="form-row">
+      <label for="card-element">
+        Credit or debit card
+      </label>
+      <div id="card-element">
+        <!-- a Stripe Element will be inserted here. -->
+      </div>
+
+      <!-- Used to display form errors -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+
+    <input type="submit" class="submit" value="Submit Payment">
+  </form>
 
 </div>
 
