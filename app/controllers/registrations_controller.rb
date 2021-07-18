@@ -6,14 +6,17 @@ class RegistrationsController < Devise::RegistrationsController
             resource.save
             yield resource if block_given?
             if resource.persisted?
+
                 @payment = Payment.new({
                     email: params['user']['email'],
                     token: params[:payment]['token'],
                     user_id: resource.id
                 })
+
                 flash[:error] = "Please check registration errors" unless @payment.valid?
 
                 begin
+                    puts "Initialized Payment #{@payment}"
                     @payment.process_payment
                     @payment.save
                 rescue Exception => e
@@ -44,7 +47,7 @@ class RegistrationsController < Devise::RegistrationsController
     protected
 
     def configure_permitted_parameters
-        devise_parameter_sanitizer.for(:sign_up).push(:payment)
+        devise_parameter_sanitizer.permit(:sign_up, keys:[:payment])
         
     end
 end

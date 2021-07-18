@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "name": "Rails server",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/rails",
+            "args": ["server"],
+            "env": 
+                {"STRIPE_TEST_SECRET_KEY":"sk_test_51JDvYDE4R2IrDKrH2lz80J2eKWiG1SHntXYz3DB0HrsTsoCLGcsKO3nL1TfInwMxYfX4hWVWs9vhfHoBpIMhfkGb00plZtjctM",
+                "STRIPE_TEST_PUBLISHABLE_KEY":"pk_test_51JDvYDE4R2IrDKrHqtZvK0H3oO0AZR05hT9lFiqYT8lVvPsfpaQmy9QMzAUh6JOkJf82XDSLMySp81si7zICNdus008SGPIMIB"}
+            // "url": "http://localhost:3000",
+            // "webRoot": "${workspaceFolder}"
+
+        }
+    ]
+}

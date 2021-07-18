@@ -1,5 +1,5 @@
 class Payment < ApplicationRecord
-    attr_accessor :card_number, :card_cvv, :card_expires_month, :card_expires_year
+    attr_accessor :card_number, :card_cvc, :card_expires_month, :card_expires_year
     belongs_to :user
 
     def self.month_options
@@ -11,15 +11,18 @@ class Payment < ApplicationRecord
     end
 
     def process_payment
-        customer = Stripe::Customer.create email: email, card: token
+        
 
+        customer = Stripe::Customer.create email: email, source: token
+            
         # `source` is obtained with Stripe.js; see https://stripe.com/docs/payments/accept-a-payment-charges#web-create-token
         Stripe::Charge.create({
                                 amount: 1000,
                                 currency: 'usd',
-                                source: 'tok_xxxx',
+                                source: self.token,
                                 description: 'Premium',
-                                customer: customer_id
+                                customer: customer.id
         })
+
     end
 end
